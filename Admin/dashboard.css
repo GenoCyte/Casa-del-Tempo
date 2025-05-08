@@ -4,14 +4,17 @@ body {
     background-color: #f2f2f2;
 }
 .header {
-    background-color: #89CFF0;
+    background-color: #000000c0;
     padding: 20px;
     text-align: center;
+    color: white;
 }
 .sidebar {
     width: 200px;
-    background-color: #7EC8E3;
+    background-color: #000000ea;
     padding: 15px;
+    color: white;
+    align-items: center;
     float: left;
     height: 100vh;
 }
@@ -20,23 +23,26 @@ body {
 }
 .sidebar a {
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px;
     font-size: 25px;
 }
 .sidebar a:hover {
-    background-color: #5B9BD5;
+    background-color: #5a5858;
     color: white;
 }
 .content {
     margin-left: 220px;
     padding: 20px;
+    align-items: center;
+    text-align: center;
 }
 .dashboard-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 .dashboard-cards {
@@ -44,7 +50,8 @@ body {
     justify-content: space-between;
 }
 .card {
-    background-color: #A7C6DB;
+    background-color: #000000ea;
+    color: white;
     padding: 20px;
     width: 180px;
     text-align: center;
@@ -64,42 +71,18 @@ h1 {
     width: 100px;
     display: block;
     margin: 0 auto 20px;
-    align-items: start;
-    align-content: first baseline ;
+    text-align: center;
+    background-color: black;
+    align-items: self-start;
+    
 }
 .profile1-img {
     width: 100px;
     border-radius: 50%;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 0px;
+    background-color: black;
 }
 hr{
     color: black;
-}
-input, select, textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #B0B0B0;
-    border-radius: 5px;
-}
-button {
-    background-color: #003c96;
-    border: none;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-button:hover {
-    background-color: #FBBF00;
-}
-.main {
-    background-color: #FFFFFF;
-    padding: 20px;
-    align-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center;
 }
