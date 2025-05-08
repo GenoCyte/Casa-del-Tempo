@@ -22,6 +22,8 @@ body {
 }
 .sidebar h2 {
     color: white;
+    text-align: center;
+    font-size: 10px;
 }
 .sidebar a {
     display: block;
@@ -90,7 +92,54 @@ h1 {
 }
 hr{
     color: black;
-    font-size: 10px;
     text-align: center;
+    font-size: 10px;
 
+}
+input, select, textarea {
+    width: 50%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #B0B0B0;
+    border-radius: 5px;
+}
+button {
+    background-color: #003c96;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #FBBF00;
+}
+.main {
+    background-color: #FFFFFF;
+    padding: 20px;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+     background-color: #000000ea;
+    
+}
+.main a{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+h6{
+    font-size: 50px;
+    text-align: center;
+}
+.main a:hover {
+    background-color: #5a5858;
+    color: white;
 }
