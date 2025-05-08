@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html?>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>CASA DEL TEMPO</title>
         <link rel="stylesheet" href="css.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <!-- Login Section -->
-         <!--
-        <div class="auth-container" id="login-section">
-            <h2>Login</h2>
-            <form onsubmit="login(event)">
-                <input type="text" id="login-username" placeholder="Username" required />
-                <input type="password" id="login-password" placeholder="Password" required />
-                <button type="submit">Login</button>
-            </form>
-            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
-        kalapati ahahhaha
-        </div>-->
-
-        <!-- Signup Section -->
-         <!--
-        <div class="auth-container" id="signup-section" style="display: none;">
-            <h2>Sign Up</h2>
-            <form onsubmit="signup(event)">
-                <input type="text" id="signup-username" placeholder="Username" required />
-                <input type="email" id="signup-email" placeholder="Email" required />
-                <input type="password" id="signup-password" placeholder="Password" required />
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-        </div>-->
-
         <!-- Navigation -->
-        <nav class="navigation" id="home-nav" style="display: none;">
+        <nav class="navigation" id="home-navi" style="display: flex;">
             <div class="nav-container">
                 <div class="Logo">
                     <img src="logo.jpg" alt="Logo" />
@@ -75,37 +48,42 @@
                 <video autoplay muted loop>
                     <source src="shopvideo1.mp4" type="video/mp4" />
                 </video>
-                </div>
-                <div class="Watches">
-                <div class="watch-card">
-                    <img src="shop1.jpg" alt="Watch 1" />
-                    <p class="watch-name">Casa Del Tempo V1</p>
-                    <p class="watch-price">$3,500</p>
-                </div>
-                <div class="watch-card">
-                    <img src="shop2.jpg" alt="Watch 2" />
-                    <p class="watch-name">Tempo Vivo</p>
-                    <p class="watch-price">$4,200</p>
-                </div>
-                <div class="watch-card">
-                    <img src="shop 3.jpg" alt="Watch 3" />
-                    <p class="watch-name">Tempus Lux</p>
-                    <p class="watch-price">$3,800</p>
-                </div>
-                <div class="watch-card">
-                    <img src="shop4.jpg" alt="Watch 4" />
-                    <p class="watch-name">Sinfonia del Tempo</p>
-                    <p class="watch-price">$6,100</p>
-                </div>
-                <div class="watch-card">
-                    <img src="shop5.jpg" alt="Watch 5" />
-                    <p class="watch-name">Vero Tempo</p>
-                    <p class="watch-price">$4,750</p>
-                </div>
-                <div class="watch-card">
-                    <img src="shop6.jpg" alt="Watch 6" />
-                    <p class="watch-name">Astra Tempo</p>
-                    <p class="watch-price">$5,000</p>
+            </div>
+            <div id="menu">
+                <div id="menu_section">
+                    <div class="container">
+                        <div class="row">
+                            <?php
+                                include 'config.php';
+                                $stmt = $conn->prepare("SELECT * FROM watch");
+                                $stmt->execute();
+                                $result = $stmt->get_result();
+                                while($row = $result->fetch_assoc()):
+                            ?>
+                            <div class="col-lg-4">
+                                <div class="card-deck rounded-9">
+                                    <div class="card p-2 border-secondary mb-2 rounded-9">
+                                        <img src="<?= $row['image']?>" class="card-img-top" width="50">
+                                        <div class="card-body p1">
+                                            <h4 class="card-title text-center text-dark"><?= $row['name']?></h4>
+                                            <h5 class="card-text text-center text-dark">₱<?= $row['price']?></h5>
+                                        </div>
+                                        <div class="card-footer p-1">
+                                            <!--<form action="action_chicken.php" method="post" class="form-submit">
+                                                <input type="hidden" name="pid" value="<?= $row['id']?>">
+                                                <input type="hidden" name="pname" value="<?= $row['product_name']?>">
+                                                <input type="hidden" name="pprice" value="<?= $row['product_price']?>">
+                                                <input type="hidden" name="pimage" value="<?= $row['product_image']?>">
+                                                <input type="hidden" name="pcode" value="<?= $row['product_code']?>">
+                                                <button class="btn-outline-danger btn-block rounded-5 addItemBtn">Add to Cart</button>
+                                            </form>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endwhile;?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,6 +104,6 @@
             <li>We believe in protecting and sustaining each otherâ€™s interests for mutual benefit.</li>
         </ol>
         </section>
-        <script src= "script.js"></script>
+        <script src="home.js"></script>
     </body>
 </html>

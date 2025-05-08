@@ -17,7 +17,7 @@
                 $_SESSION['username'] = $username;
                 echo"<script type='text/javascript'> 
                     alert('Log-In Successful');
-                    window.location='home.html';
+                    window.location='home.php';
                     </script>";
             }else{
                 echo"<script type='text/javascript'> 

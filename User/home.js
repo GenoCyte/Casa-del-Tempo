@@ -1,6 +1,3 @@
-document.getElementById("home-nav").style.display = "flex";
-document.getElementById("home-section").style.display = "block";
-
 function showShop() {
     document.getElementById("home-section").style.display = "none";
     document.getElementById("shop-section").style.display = "block";
