@@ -117,12 +117,11 @@ button:hover {
 }
 .main {
     background-color: #FFFFFF;
-    padding: 20px;
     align-content: center;
     align-self: center;
     align-items: center;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
      background-color: #000000ea;
     
 }

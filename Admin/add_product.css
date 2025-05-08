@@ -117,7 +117,6 @@ button:hover {
 }
 .main {
     background-color: #FFFFFF;
-
     align-content: center;
     align-self: center;
     align-items: center;
@@ -139,5 +138,8 @@ button:hover {
 }
 .main .header {
     background-color:#000000ea;
-
+}
+h6{
+    font-size: 50px;
+    text-align: center;
 }
