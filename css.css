@@ -233,6 +233,10 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+.Aboutus h1{
+  text-align: center;
+  font-size: 40px;
+}
 .Aboutus h2 {
     text-align: center;
     font-size: 48px;
@@ -250,22 +254,21 @@ body {
     margin: 0 auto; 
     padding: 0 20px;
   }
-  .Aboutus ol {
-    background-color: #000; 
-    color: white; 
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0; 
-    width: 100%;
-    text-align: center;
-    list-style-position: inside; 
-  }
-  
-  .Aboutus ol li {
-    margin-bottom: 20px;
-    list-style-type: decimal; 
-    text-align: center; 
-  }
+.Aboutus ol {
+  color: white;
+  background-color: #000;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center; /* center the whole block */
+  list-style-position: inside;
+  padding: 20px;
+}
+
+.Aboutus ol li {
+  margin-bottom: 20px;
+  list-style-type: decimal;
+}
+
 
 body.auth-page .navigation {
     display: none;
@@ -478,4 +481,50 @@ body.auth-page .navigation {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+#Best {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+.section-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rolex,
+.patek,
+.Audemars,
+.richard,
+.lange,
+.greubel {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+  flex-direction: row;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-content {
+  flex: 1;
+  text-align: center;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+#Mission{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
 }
