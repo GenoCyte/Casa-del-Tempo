@@ -1,145 +1,147 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f2f2f2;
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header {
-    background-color: #000000c0;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-.sidebar {
-    width: 200px;
-    background-color: #000000ea;
-    padding: 15px;
-    color: white;
-    align-items: center;
-    float: left;
-    height: 100vh;
-    text-align: center;
-    font-size: 15px;
-}
-.sidebar h2 {
-    color: white;
-    text-align: center;
-    font-size: 10px;
-}
-.sidebar a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    font-size: 15px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
-.sidebar a:hover {
-    background-color: #5a5858;
-    color: white;
-}
-.content {
-    margin-left: 220px;
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-}
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.dashboard-cards {
-    display: flex;
-    justify-content: space-between;
-}
-.card {
-    background-color: #000000ea;
-    color: white;
-    padding: 20px;
-    width: 180px;
-    text-align: center;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-.card:last-child {
-    margin-right: 0;
-}
-.chart {
-    margin-top: 30px;
-}
-h1 {
-    text-align: left;
-}
-.profile-img {
-    width: 100px;
-    display: block;
-    margin: 0 auto 20px;
-    text-align: center;
-    background-color: black;
-    align-items: self-start;
-    
-}
-.profile1-img {
-    width: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 0px;
-    background-color: black;
-}
-hr{
-    color: black;
-    text-align: center;
-    font-size: 10px;
 
+body {
+display: flex;
+min-height: 100vh;
+background: #f4f6f9;
 }
-input, select, textarea {
-    width: 50%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #B0B0B0;
-    border-radius: 5px;
+
+.sidebar {
+width: 250px;
+background-color: #1e293b;
+color: white;
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 15px;
 }
-button {
-    background-color: #003c96;
-    border: none;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+
+.sidebar img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+object-fit: cover;
 }
-button:hover {
-    background-color: #FBBF00;
+
+.sidebar a {
+color: #cbd5e1;
+text-decoration: none;
+padding: 10px;
+border-radius: 8px;
+transition: 0.2s;
 }
-.main {
-    background-color: #FFFFFF;
-    align-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-   
+
+.sidebar a:hover {
+background-color: #334155;
 }
-.main a {
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
 }
-.main a:hover {
-    background-color: #5a5858;
-    color: white;
+
+.dashboard-header h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-.main .header {
-    background-color:#000000ea;
+
+.add-product-form {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-h6{
-    font-size: 50px;
-    text-align: center;
+
+.add-product-form label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-product-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-product-form button:hover {
+  background-color: #0056b3;
+}
+.add-product-form {
+  background: white;
+  padding: 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-columns {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+  width: 400px;
+}
+
+.add-product-form label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-product-form button {
+  align-self: flex-start;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-product-form button:hover {
+  background-color: #0056b3;
 }

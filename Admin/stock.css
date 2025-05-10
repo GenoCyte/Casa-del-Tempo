@@ -1,144 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f2f2f2;
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header {
-    background-color: #000000c0;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-.sidebar {
-    width: 200px;
-    background-color: #000000ea;
-    padding: 15px;
-    color: white;
-    align-items: center;
-    float: left;
-    height: 100vh;
-    text-align: center;
-    font-size: 15px;
-}
-.sidebar h2 {
-    color: white;
-    text-align: center;
-    font-size: 10px;
-}
-.sidebar a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    font-size: 15px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
-.sidebar a:hover {
-    background-color: #5a5858;
-    color: white;
-}
-.content {
-    margin-left: 220px;
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-}
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.dashboard-cards {
-    display: flex;
-    justify-content: space-between;
-}
-.card {
-    background-color: #000000ea;
-    color: white;
-    padding: 20px;
-    width: 180px;
-    text-align: center;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-.card:last-child {
-    margin-right: 0;
-}
-.chart {
-    margin-top: 30px;
-}
-h1 {
-    text-align: left;
-}
-.profile-img {
-    width: 100px;
-    display: block;
-    margin: 0 auto 20px;
-    text-align: center;
-    background-color: black;
-    align-items: self-start;
-    
-}
-.profile1-img {
-    width: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 0px;
-    background-color: black;
-}
-hr{
-    color: black;
-    text-align: center;
-    font-size: 10px;
 
+body {
+display: flex;
+min-height: 100vh;
+background: #f4f6f9;
 }
-input, select, textarea {
-    width: 50%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #B0B0B0;
-    border-radius: 5px;
+
+.sidebar {
+width: 250px;
+background-color: #1e293b;
+color: white;
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 15px;
 }
-button {
-    background-color: #003c96;
-    border: none;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+
+.sidebar img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+object-fit: cover;
 }
-button:hover {
-    background-color: #FBBF00;
+
+.sidebar a {
+color: #cbd5e1;
+text-decoration: none;
+padding: 10px;
+border-radius: 8px;
+transition: 0.2s;
 }
-.main {
-    background-color: #FFFFFF;
-    align-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-     background-color: #000000ea;
-    
+
+.sidebar a:hover {
+background-color: #334155;
 }
-.main a{
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
+
+.content {
+flex: 1;
+padding: 30px;
 }
-h6{
-    font-size: 50px;
-    text-align: center;
+
+.dashboard-header h3 {
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 20px;
 }
-.main a:hover {
-    background-color: #5a5858;
-    color: white;
+
+table {
+width: 100%;
+border-collapse: collapse;
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+padding: 12px 16px;
+text-align: left;
+border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+background-color: #f1f5f9;
+font-weight: 600;
+}
+
+tr:hover {
+background-color: #f9fafb;
+}
+select {
+padding: 5px;
+border-radius: 4px;
+}
+.stock-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.stock-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  text-align: center;
+}
+
+.stock-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.stock-form {
+  margin-top: 10px;
+}
+
+.stock-form input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.stock-form button {
+  padding: 5px 10px;
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.stock-form button:hover {
+  background-color: #16a085;
 }

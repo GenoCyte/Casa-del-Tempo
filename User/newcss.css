@@ -7,9 +7,6 @@ body {
     overflow-x: hidden;
 }
 
-.navigation {
-    display: none;
-}
 .navigation.show-nav {
     display: flex;
     justify-content: space-between;
@@ -72,7 +69,9 @@ body {
 .auth-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:  50px;
 }
 
 .auth-container input {
@@ -98,7 +97,7 @@ body {
 
 /* Login specific */
 #login-section button {
-  background: #4285f4; /* Blue for login */
+  background: #4285f4; 
 }
 
 #login-section button:hover {
@@ -107,7 +106,7 @@ body {
 
 /* Signup specific */
 #signup-section button {
-  background: #34a853; /* Green for signup */
+  background: #34a853; 
   margin-top: 5px;
 }
 
@@ -265,58 +264,215 @@ body {
     text-align: center; 
   }
 
-  hr{
-    position: relative;
-    top: 40px;
-    height: 4px;
-    border-width: 0px;
-    background-color: rgb(0, 0, 0);
+body.auth-page .navigation {
+    display: none;
 }
-
-.watches{
-    position: relative;
-    top: 70px;
-    left: 60px;
-    text-transform: uppercase;
-}
-#menu{
-    height: fit-content;
-    width: 100%;
-    position: relative;
-}
-#menu_section{
-    position: relative;
-    display: flex;
-    top: 50px;
-    left: 0px;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 50px;
-}
-#items{
-    width: 200px;
-    height: 250px;
-    background-color: rgb(248, 231, 200);
-    border: solid transparent 3px;
-    border-radius: 10px;
-    align-items: center;
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .form-container h2 {
     text-align: center;
-}
-#items:hover{
-    border: solid #a5a4a4 3px;
-}
-#item_img{
-    height: 150px;
-    width: 150px;
-    border-radius: 15px;
-}
-#item_button{
-    background-color: #e2dfdf;
-    border: solid;
+    margin-bottom: 20px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .product-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .product-image {
+    flex: 1;
+    position: relative;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .auth-retailer {
     margin-top: 10px;
-    height: 25px;
-    width: 90px;
-    border-radius: 10px;
-    border-color: rgb(153, 23, 23);
-}
+    max-width: 150px;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-details h2,
+  .product-details h3 {
+    margin-top: 0;
+    color: #111;
+  }
+  
+  .product-details p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .product-details strong {
+    font-weight: bold;
+  }
+  .Casa {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+  }
+  
+  .Casaimg,
+  .text {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .Casaimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .text {
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .text .text-wrapper {
+    max-width: 600px;
+  }
+  
+  .text h2 {
+    font-size:50px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .text h3 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .text a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+  }  
+  .Home-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .footer-column {
+    min-width: 150px;
+    font-size: 14px;
+  }
+  
+  .footer-description {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-description p {
+    line-height: 1.5;
+  }
+  
+  .footer-email {
+    margin-top: 10px;
+  }
+  
+  .plain-email {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 6px;
+  }
+  
+  .footer-column a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+  }
 
+  #specs button {
+    background: #4285f4;
+    height: 30px;
+  }
+  .auth-page {
+    background-image: url('about\ us.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

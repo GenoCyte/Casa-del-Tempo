@@ -1,6 +1,10 @@
 <?php
     $username = $_POST['username'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $email = $_POST['email'];
+    $contact = $_POST['contact'];
+    $address = $_POST['address'];
     $password = $_POST['password'];
     $otp = 0;
 
@@ -9,18 +13,18 @@
         die('Connection Failed : ' .$conn->connect_error);
     }
 
-    $sql = "SELECT username from user WHERE username = '$username'";
+    $sql = "SELECT email from user WHERE email = '$email'";
     $result = $conn->query($sql);
     if($result -> num_rows > 0){
         echo"<script>
-                alert('Username is Already Used')
+                alert('Email is Already Used')
                 window.location='login.html'
             </script>";
     }
     else{
-        $stmt = $conn->prepare("insert into user(username, email, password)
-        values (?,?,?)");
-        $stmt->bind_param("sss", $username, $email, $password);
+        $stmt = $conn->prepare("insert into user(username, first_name, last_name, email, contact, address, password)
+        values (?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssiss", $username, $first_name, $last_name ,$email, $contact, $address, $password);
         $stmt->execute();
 
         echo"<script type='text/javascript'> 
