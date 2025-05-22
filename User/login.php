@@ -7,7 +7,7 @@
     if(isset($_POST['submit'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $stmt = $conn->prepare("select * from user where email = ?");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt_result = $stmt->get_result();

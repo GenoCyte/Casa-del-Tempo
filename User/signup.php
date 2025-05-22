@@ -22,8 +22,8 @@
             </script>";
     }
     else{
-        $stmt = $conn->prepare("insert into user(username, first_name, last_name, email, contact, address, password)
-        values (?,?,?,?,?,?,?)");
+        $stmt = $conn->prepare("INSERT INTO user(username, first_name, last_name, email, contact, address, password)
+        VALUES (?,?,?,?,?,?,?)");
         $stmt->bind_param("ssssiss", $username, $first_name, $last_name ,$email, $contact, $address, $password);
         $stmt->execute();
 

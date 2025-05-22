@@ -149,7 +149,7 @@
                                 <input type="hidden" value="<?= $row['id']?>" class="pid">
                                 <td width="200" height="100" class="text-center"><img src="<?= $row['image']?>" width="100"></td>
                                 <td width="200" class="text-center"><?= $row['product_name']?></td>
-                                <td width="200" class="text-center">₱<?= number_format($row['price'],2)?></td>
+                                <td width="200" class="text-center">$<?= number_format($row['price'],2)?></td>
                                 <input type="hidden" value="<?= $row['price']?>" class="text-center pprice">
                                 <td width="200" class="text-center"><input type="number" class="qty" value="<?= $row['quantity']?>"></td>
                                 <td width="200" class="text-center"><a id="trash_btn" href="cartAction.php?remove=<?= $row['id']?>" onclick="return confirm('Are you sure?')">🗑</a></td>
@@ -197,7 +197,7 @@
                                 <td><?= $row['id'] ?></td>
                                 <td><?= $row['product_name'] ?></td>
                                 <td><?= $row['quantity'] ?></td>
-                                <td>₱<?= number_format($row['sub_total'], 2) ?></td>
+                                <td>$<?= number_format($row['sub_total'], 2) ?></td>
                                 <td><?= $row['status'] ?></td>
                                 <td><?= $row['date'] ?></td>
                                 <td>

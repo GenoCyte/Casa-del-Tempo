@@ -28,6 +28,7 @@
     <a href="Confirmed_Orders.php">Complete Orders</a>
     <a href="stock.php">Stocks</a>
     <a href="add_product.php">Add Product</a>
+    <a href="delete_product.php">Delete Product</a>
   </div>
 
   <div class="content">

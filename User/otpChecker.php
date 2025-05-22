@@ -9,7 +9,7 @@
     }
     $otp = $_POST['otp'];
 
-    $sql = "SELECT otp from user where email = '$user'";
+    $sql = "SELECT otp FROM user WHERE email = '$user'";
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {

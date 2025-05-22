@@ -32,7 +32,7 @@ if ($user_row = $user_result->fetch_assoc()) {
     $address = $user_row['address'];
     $contact = $user_row['contact'];
     $email = $user_row['email'];
-    $date = date("m/d/y");
+    $date = date("Y-m-d");
 
     // Fetch cart items
     $cart_items = [];
@@ -48,7 +48,7 @@ if ($user_row = $user_result->fetch_assoc()) {
     // Process order
     if (isset($_GET['order']) && count($cart_items) > 0) {
         foreach ($cart_items as $item) {
-            $pid = $item['id'];
+            $pid = $item['product_id'];
             $pname = $item['product_name'];
             $pprice = $item['price'];
             $qty = $item['quantity'];
@@ -68,7 +68,7 @@ if ($user_row = $user_result->fetch_assoc()) {
             $itemName = $item['product_name'];
             $itemQuantity = $item['quantity'];
             $itemPrice = $item['price'];
-            $itemTotal = $item['sub_price'];
+            $itemTotal = $item['sub_total'];
             $total += $itemTotal;
 
             $tableRows .= "

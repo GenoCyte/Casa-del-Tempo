@@ -13,15 +13,10 @@ while ($row = $completedOrders->fetch_assoc()) {
     $quantity = $row['quantity'];
     $sub_total = $row['sub_total'];
     $date_completed = date('Y-m-d');
-    
-    // Get user's full name
-    $userResult = $conn->query("SELECT CONCAT(first_name, ' ', last_name) AS user_name FROM user WHERE id = '$user_id'");
-    $userRow = $userResult->fetch_assoc();
-    $user_name = $userRow ? $userRow['user_name'] : 'Unknown';
 
     // Insert into completed_orders
     $stmt = $conn->prepare("INSERT INTO completed_orders (order_id, user_id, user_email, product_id, product_name, quantity, sub_total, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("iisssids", $order_id, $user_id, $user_name, $product_id, $product_name, $quantity, $sub_total, $date_completed);
+    $stmt->bind_param("iisssids", $order_id, $user_id, $user_email, $product_id, $product_name, $quantity, $sub_total, $date_completed);
     $stmt->execute();
 
     // Delete from orders

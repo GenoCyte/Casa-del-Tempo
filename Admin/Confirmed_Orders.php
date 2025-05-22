@@ -1,6 +1,27 @@
 <?php
 include 'config.php';
 
+$completedOrders = $conn->query("SELECT * FROM orders WHERE status = 'Completed'");
+
+while ($row = $completedOrders->fetch_assoc()) {
+    $order_id = $row['id'];
+    $user_id = $row['user_id'];
+    $user_email = $row['user_email'];
+    $product_id = $row['product_id'];
+    $product_name = $row['product_name'];
+    $quantity = $row['quantity'];
+    $sub_total = $row['sub_total'];
+    $date_completed = date('Y-m-d');
+
+    // Insert into completed_orders
+    $stmt = $conn->prepare("INSERT INTO completed_orders (order_id, user_id, user_email, product_id, product_name, quantity, sub_total, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("iisssids", $order_id, $user_id, $user_email, $product_id, $product_name, $quantity, $sub_total, $date_completed);
+    $stmt->execute();
+
+    // Delete from orders
+    $conn->query("DELETE FROM orders WHERE id = '$order_id'");
+}
+
 $sql = "SELECT order_id, user_id, user_email, product_id, product_name, quantity, sub_total, date FROM completed_orders";
 $result = $conn->query($sql);
 ?>
